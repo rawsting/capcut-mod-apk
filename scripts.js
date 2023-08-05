@@ -60,64 +60,57 @@ const emojisByCategory = {
   // Define emojis for each category here...
   
 };
+document.addEventListener("DOMContentLoaded", function () {
+    const emojiContainer = document.getElementById("emojiContainer");
+    const searchInput = document.getElementById("searchInput");
 
-const emojiCategoriesElement = document.getElementById("emoji-categories");
-const emojiListElement = document.getElementById("emoji-list");
-const searchInput = document.getElementById("search");
+    // Function to generate emoji cards
+    function createEmojiCard(emoji) {
+        const emojiCard = document.createElement("div");
+        emojiCard.classList.add("emoji-card");
+        emojiCard.innerHTML = `<span class="emoji">${emoji}</span>`;
+        emojiCard.addEventListener("click", () => {
+            copyToClipboard(emoji);
+        });
+        emojiContainer.appendChild(emojiCard);
+    }
 
-// Function to render emojis for a specific category
-function renderEmojis(category) {
-  emojiListElement.innerHTML = "";
-  const emojis = emojisByCategory[category];
-  emojis.forEach(emoji => {
-    const emojiElement = document.createElement("span");
-    emojiElement.classList.add("emoji");
-    emojiElement.innerText = emoji;
-    emojiElement.addEventListener("click", () => copyToClipboard(emoji));
-    emojiListElement.appendChild(emojiElement);
-  });
-}
+    // Function to copy emoji to clipboard
+    function copyToClipboard(emoji) {
+        const textArea = document.createElement("textarea");
+        textArea.value = emoji;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+        alert(`Copied: ${emoji}`);
+    }
 
-// Function to handle search
-function handleSearch() {
-  const searchTerm = searchInput.value.toLowerCase();
-  const filteredCategories = emojiCategories.filter(category => category.toLowerCase().includes(searchTerm));
-  emojiCategoriesElement.innerHTML = "";
-  filteredCategories.forEach(category => {
-    const categoryElement = document.createElement("div");
-    categoryElement.classList.add("category");
-    categoryElement.innerText = category;
-    categoryElement.addEventListener("click", () => renderEmojis(category));
-    emojiCategoriesElement.appendChild(categoryElement);
-  });
-  if (!searchTerm) {
-    emojiCategories.forEach(category => {
-      const categoryElement = document.createElement("div");
-      categoryElement.classList.add("category");
-      categoryElement.innerText = category;
-      categoryElement.addEventListener("click", () => renderEmojis(category));
-      emojiCategoriesElement.appendChild(categoryElement);
+    // Function to filter emojis based on search input
+    function filterEmojis(searchTerm) {
+        emojiContainer.innerHTML = "";
+        const filteredEmojis = emojis.filter((emoji) => {
+            return emoji.includes(searchTerm);
+        });
+        filteredEmojis.forEach(createEmojiCard);
+    }
+
+    // Function to display all emojis
+    function displayAllEmojis() {
+        emojiContainer.innerHTML = "";
+        emojis.forEach(createEmojiCard);
+    }
+
+    // Event listener for search input
+    searchInput.addEventListener("input", function () {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        if (searchTerm !== "") {
+            filterEmojis(searchTerm);
+        } else {
+            displayAllEmojis();
+        }
     });
-  }
-}
 
-// Function to copy emoji to clipboard
-function copyToClipboard(emoji) {
-  const textarea = document.createElement("textarea");
-  textarea.value = emoji;
-  document.body.appendChild(textarea);
-  textarea.select();
-  document.execCommand("copy");
-  document.body.removeChild(textarea);
-}
-
-// Initial render of categories and emojis
-emojiCategories.forEach(category => {
-  const categoryElement = document.createElement("div");
-  categoryElement.classList.add("category");
-  categoryElement.innerText = category;
-  categoryElement.addEventListener("click", () => renderEmojis(category));
-  emojiCategoriesElement.appendChild(categoryElement);
+    // Display all emojis by default
+    displayAllEmojis();
 });
-
-searchInput.addEventListener("input", handleSearch);
