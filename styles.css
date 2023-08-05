@@ -69,40 +69,18 @@ h2 {
   margin-top: 10px;
 }
 
-.category-container h2 {
-  font-size: 20px;
-  margin: 0;
-  margin-bottom: 10px;
+.category-section {
+  margin-bottom: 20px;
 }
 
-.category-container h3 {
-  font-size: 18px;
+.category-heading {
+  font-size: 20px;
+  font-weight: bold;
   margin: 0;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #ccc;
   margin-bottom: 10px;
 }
 
 /* Fix for headings in category-wise section to display on a new line */
-.category-container h3 {
+.category-heading {
   display: block;
-}
-
-/* Add styles for each subcategory section */
-.subcategory-section {
-  margin-bottom: 20px;
-}
-
-.subcategory-heading {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  margin-bottom: 5px;
-}
-
-/* Add styles for subcategory emojis container */
-.subcategory-section .emoji-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
 }
