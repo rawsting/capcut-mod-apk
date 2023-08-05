@@ -9,7 +9,7 @@ header {
   background-color: #2196F3;
   color: #fff;
   padding: 20px;
-  text-align: left;
+  text-align: center;
 }
 
 main {
@@ -69,18 +69,17 @@ h2 {
   margin-top: 10px;
 }
 
-.category-section {
+.category-wise h2 {
   margin-bottom: 20px;
 }
 
-.category-heading {
+.category-container .category-section {
+  margin-bottom: 20px;
+}
+
+.category-container .category-heading {
   font-size: 20px;
   font-weight: bold;
   margin: 0;
   margin-bottom: 10px;
-}
-
-/* Fix for headings in category-wise section to display on a new line */
-.category-heading {
-  display: block;
 }
