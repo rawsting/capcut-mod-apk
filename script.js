@@ -34,21 +34,27 @@ function generateFrequentlyUsedEmojis() {
 }
 
 // Function to generate category-wise emojis
-function generateCategoryWiseEmojis() {
-  const categoryWiseContainer = document.getElementById("category-wise-container");
-  for (const category in emojisByCategory) {
-    const categoryHeading = document.createElement("h3");
-    categoryHeading.innerText = category;
-    categoryWiseContainer.appendChild(categoryHeading);
+function generateCategoryWiseEmojis(category, emojis) {
+  const categoryContainer = document.createElement("div");
+  categoryContainer.className = "category-section";
+  
+  const categoryHeading = document.createElement("h3");
+  categoryHeading.className = "category-heading";
+  categoryHeading.innerText = category;
+  categoryContainer.appendChild(categoryHeading);
 
-    emojisByCategory[category].forEach((emoji) => {
-      const emojiElement = document.createElement("span");
-      emojiElement.className = "emoji";
-      emojiElement.innerText = emoji;
-      emojiElement.addEventListener("click", () => copyToClipboard(emoji));
-      categoryWiseContainer.appendChild(emojiElement);
-    });
-  }
+  const emojiContainer = document.createElement("div");
+  emojiContainer.className = "emoji-container";
+  emojis.forEach((emoji) => {
+    const emojiElement = document.createElement("span");
+    emojiElement.className = "emoji";
+    emojiElement.innerText = emoji;
+    emojiElement.addEventListener("click", () => copyToClipboard(emoji));
+    emojiContainer.appendChild(emojiElement);
+  });
+
+  categoryContainer.appendChild(emojiContainer);
+  document.querySelector(".category-container").appendChild(categoryContainer);
 }
 
 // Function to copy emoji to clipboard
@@ -63,4 +69,6 @@ function copyToClipboard(text) {
 
 // Initialize the page
 generateFrequentlyUsedEmojis();
-generateCategoryWiseEmojis();
+for (const category in emojisByCategory) {
+  generateCategoryWiseEmojis(category, emojisByCategory[category]);
+}
