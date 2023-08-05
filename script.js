@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const categories = Object.keys(emojis);
-    const categoriesContainer = document.querySelector(".categories");
     const emojiContainer = document.getElementById("emojiContainer");
     const searchInput = document.getElementById("searchInput");
 
@@ -26,50 +24,31 @@ document.addEventListener("DOMContentLoaded", function () {
         alert(`Copied: ${emoji}`);
     }
 
-    // Function to filter emojis based on search input and category
-    function filterEmojis(category, searchTerm) {
+    // Function to filter emojis based on search input
+    function filterEmojis(searchTerm) {
         emojiContainer.innerHTML = "";
-        const filteredEmojis = emojis[category].filter((emoji) => {
+        const filteredEmojis = emojis.filter((emoji) => {
             return emoji.includes(searchTerm);
         });
         filteredEmojis.forEach(createEmojiCard);
     }
 
-    // Function to display emojis of selected category
-    function displayEmojis(category) {
-        emojiContainer.innerHTML = "";
-        emojis[category].forEach(createEmojiCard);
-    }
-
     // Function to display all emojis
     function displayAllEmojis() {
         emojiContainer.innerHTML = "";
-        Object.values(emojis).forEach((categoryEmojis) => {
-            categoryEmojis.forEach(createEmojiCard);
-        });
-    }
-
-    // Function to create category buttons
-    function createCategoryButton(category) {
-        const button = document.createElement("button");
-        button.textContent = category;
-        button.addEventListener("click", () => {
-            displayEmojis(category);
-        });
-        categoriesContainer.appendChild(button);
+        emojis.forEach(createEmojiCard);
     }
 
     // Event listener for search input
     searchInput.addEventListener("input", function () {
         const searchTerm = searchInput.value.trim().toLowerCase();
-        const activeCategory = categoriesContainer.querySelector(".active");
-        if (activeCategory) {
-            filterEmojis(activeCategory.textContent, searchTerm);
+        if (searchTerm !== "") {
+            filterEmojis(searchTerm);
         } else {
             displayAllEmojis();
         }
     });
 
-    // Create category buttons
-    categories.forEach(createCategoryButton);
+    // Display all emojis by default
+    displayAllEmojis();
 });
