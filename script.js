@@ -1,3 +1,8 @@
+const emojiCategories = [
+  "Smiley Face Emojis",
+  "Emotional Faces Emojis",
+  // Add more categories here...
+];
 const emojisByCategory = {
   "Smiley Face Emojis": ["😀", "😃", "😄", "😊", "😋", "😌", "😍", "😎", "😏", "😒", "😓", "😔", "😖", "😘", "😚", "😜", "😝", "😞", "😠", "😡", "😢", "😣", "😤", "😥", "😨", "😩", "😪", "😫", "😭", "😰", "😱", "😲", "😳", "😵", "😷", "😸", "😹", "😺", "😻", "😼", "😽", "😾", "😿", "🙀", "🙂", "🙃", "🙄", "🙅", "🙆", "🙇", "🙈", "🙉", "🙊", "🙋", "🙌", "🙍", "🙎", "🙏"],
   "Emotional Faces Emojis": ["🤔", "🤕", "🤗", "🤢", "🤣", "🤤", "🤥", "🤧", "🤨", "🤩", "🤪", "🤫", "🤬", "🤭", "🤮", "🤯"],
@@ -48,4 +53,69 @@ const emojisByCategory = {
   "Zodiac Symbols": ["♈", "♉", "♊", "♋", "♌", "♍", "♎", "♏", "♐", "♑", "♒", "♓", "⛎"],
   "Gender and Sexuality Symbols": ["♀️", "♂️", "⚧️"],
   "Flags": ["🏳️", "🏴", "🏁", "🚩", "🏳️‍🌈", "🇦🇫", "🇦🇽", "🇦🇱", "🇩🇿", "🇦🇸", "🇦🇩", "🇦🇴", "🇦🇮", "🇦🇶", "🇦🇬", "🇦🇷", "🇦🇲", "🇦🇼", "🇦🇺", "🇦🇹", "🇦🇿", "🇧🇸", "🇧🇭", "🇧🇩", "🇧🇧", "🇧🇾", "🇧🇪", "🇧🇿", "🇧🇯", "🇧🇲", "🇧🇹", "🇧🇴", "🇧🇦", "🇧🇼", "🇧🇷", "🇮🇴", "🇻🇬", "🇧🇳", "🇧🇬", "🇧🇫", "🇧🇮", "🇨🇻", "🇰🇭", "🇨🇲", "🇨🇦", "🇮🇨", "🇰🇾", "🇨🇫", "🇹🇩", "🇨🇱", "🇨🇳", "🇨🇽", "🇨🇨", "🇨🇴", "🇰🇲", "🇨🇬", "🇨🇩", "🇨🇰", "🇨🇷", "🇭🇷", "🇨🇺", "🇨🇼", "🇨🇾", "🇨🇿", "🇩🇰", "🇩🇯", "🇩🇲", "🇩🇴", "🇪🇨", "🇪🇬", "🇸🇻", "🇬🇶", "🇪🇷", "🇪🇪", "🇪🇹", "🇪🇺", "🇫🇰", "🇫🇴", "🇫🇯", "🇫🇮", "🇫🇷", "🇬🇫", "🇵🇫", "🇹🇫", "🇬🇦", "🇬🇲", "🇬🇪", "🇩🇪", "🇬🇭", "🇬🇮", "🇬🇷", "🇬🇱", "🇬🇩", "🇬🇵", "🇬🇺", "🇬🇹", "🇬🇬", "🇬🇳", "🇬🇼", "🇬🇾", "🇭🇹", "🇭🇳", "🇭🇰", "🇭🇺", "🇮🇸", "🇮🇳", "🇮🇩", "🇮🇷", "🇮🇶", "🇮🇪", "🇮🇲", "🇮🇹", "🇮🇪", "🇮🇲", "🇮🇹", "🇯🇲", "🇯🇵", "🇯🇪", "🇯🇴", "🇰🇿", "🇰🇪", "🇰🇮", "🇽🇰", "🇰🇼", "🇰🇬", "🇱🇦", "🇱🇻", "🇱🇧", "🇱🇸", "🇱🇷", "🇱🇾", "🇱🇮", "🇱🇹", "🇱🇺", "🇲🇴", "🇲🇰", "🇲🇬", "🇲🇼", "🇲🇾", "🇲🇻", "🇲🇱", "🇲🇹", "🇲🇭", "🇲🇶", "🇲🇷", "🇲🇺", "🇾🇹", "🇲🇽", "🇫🇲", "🇲🇩", "🇲🇨", "🇲🇳", "🇲🇪", "🇲🇸", "🇲🇦", "🇲🇿", "🇲🇲", "🇳🇦", "🇳🇷", "🇳🇵", "🇳🇱", "🇳🇨", "🇳🇿", "🇳🇮", "🇳🇪", "🇳🇬", "🇳🇺", "🇳🇫", "🇰🇵", "🇲🇵", "🇳🇴", "🇴🇲", "🇵🇰", "🇵🇼", "🇵🇸", "🇵🇦", "🇵🇬", "🇵🇾", "🇵🇪", "🇵🇭", "🇵🇳", "🇵🇱", "🇵🇹", "🇵🇷", "🇶🇦", "🇷🇪", "🇷🇴", "🇷🇺", "🇷🇼", "🇼🇸", "🇸🇲", "🇸🇦", "🇸🇳", "🇷🇸", "🇸🇨", "🇸🇱", "🇸🇬", "🇸🇽", "🇸🇰", "🇸🇮", "🇸🇧", "🇸🇴", "🇿🇦", "🇬🇸", "🇸🇸", "🇪🇸", "🇱🇰", "🇧🇱", "🇸🇭", "🇰🇳", "🇱🇨", "🇵🇲", "🇻🇨", "🇸🇩", "🇸🇷", "🇸🇿", "🇸🇪", "🇨🇭", "🇸🇾", "🇹🇼", "🇹🇯", "🇹🇿", "🇹🇭", "🇹🇱", "🇹🇬", "🇹🇰", "🇹🇴", "🇹🇹", "🇹🇳", "🇹🇷", "🇹🇲", "🇹🇨", "🇹🇻", "🇻🇮", "🇺🇬", "🇺🇦", "🇦🇪", "🇬🇧", "🇺🇸", "🇺🇾", "🇺🇿", "🇻🇺", "🇻🇦", "🇻🇪", "🇻🇳", "🇼🇫", "🇪🇭", "🇾🇪", "🇿🇲", "🇿🇼"]
+
+
+  // Define emojis for each category here...
+  
+};
+
+const emojiCategoriesElement = document.getElementById("emoji-categories");
+const emojiListElement = document.getElementById("emoji-list");
+const searchInput = document.getElementById("search");
+
+// Function to render emojis for a specific category
+function renderEmojis(category) {
+  emojiListElement.innerHTML = "";
+  const emojis = emojisByCategory[category];
+  emojis.forEach(emoji => {
+    const emojiElement = document.createElement("span");
+    emojiElement.classList.add("emoji");
+    emojiElement.innerText = emoji;
+    emojiElement.addEventListener("click", () => copyToClipboard(emoji));
+    emojiListElement.appendChild(emojiElement);
+  });
 }
+
+// Function to handle search
+function handleSearch() {
+  const searchTerm = searchInput.value.toLowerCase();
+  const filteredCategories = emojiCategories.filter(category => category.toLowerCase().includes(searchTerm));
+  emojiCategoriesElement.innerHTML = "";
+  filteredCategories.forEach(category => {
+    const categoryElement = document.createElement("div");
+    categoryElement.classList.add("category");
+    categoryElement.innerText = category;
+    categoryElement.addEventListener("click", () => renderEmojis(category));
+    emojiCategoriesElement.appendChild(categoryElement);
+  });
+  if (!searchTerm) {
+    emojiCategories.forEach(category => {
+      const categoryElement = document.createElement("div");
+      categoryElement.classList.add("category");
+      categoryElement.innerText = category;
+      categoryElement.addEventListener("click", () => renderEmojis(category));
+      emojiCategoriesElement.appendChild(categoryElement);
+    });
+  }
+}
+
+// Function to copy emoji to clipboard
+function copyToClipboard(emoji) {
+  const textarea = document.createElement("textarea");
+  textarea.value = emoji;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
+}
+
+// Initial render of categories and emojis
+emojiCategories.forEach(category => {
+  const categoryElement = document.createElement("div");
+  categoryElement.classList.add("category");
+  categoryElement.innerText = category;
+  categoryElement.addEventListener("click", () => renderEmojis(category));
+  emojiCategoriesElement.appendChild(categoryElement);
+});
+
+searchInput.addEventListener("input", handleSearch);
