@@ -2,26 +2,38 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material-ui/core@4.11.2/dist/umd/material-ui.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <title>Emoji Library</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emoji Library</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="header">
-        <h1>Emoji Library</h1>
-        <input type="text" id="searchInput" placeholder="Search emojis...">
-    </div>
+  <header>
+    <h1>Emoji Library</h1>
+  </header>
+  <main>
+    <section class="frequently-used">
+      <h2>Frequently Used</h2>
+      <div class="emoji-container" id="frequently-used-container">
+        <!-- Frequently used emojis will be generated here -->
+      </div>
+    </section>
+    <section class="category-wise">
+      <h2>Category-wise</h2>
+      <div class="emoji-container" id="category-wise-container">
+        <!-- Category-wise emojis will be generated here -->
+      </div>
+    </section>
+  </main>
 
-    <div class="emoji-container" id="emojiContainer">
-        <!-- Emojis will be dynamically added here -->
-    </div>
+  <!-- Google Ads container -->
+  <div class="ads-container" id="google-ads-container">
+    <!-- Insert your Google Ads code here -->
+  </div>
 
-    <script src="emojis.js"></script>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
