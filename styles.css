@@ -93,3 +93,10 @@ h2 {
   margin: 0;
   margin-bottom: 5px;
 }
+
+/* Add styles for subcategory emojis container */
+.subcategory-section .emoji-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
