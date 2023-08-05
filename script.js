@@ -3,7 +3,7 @@ const frequentlyUsedEmojis = [
   "😄", "😊", "😃", "😉", "😍", "😘", "🥰", "😚", "😋", "😛", "😝", "😜", "🤪", "🤨", "🧐", "🤓", "😎", "🥳", "🤩", "🥸", "🤗", "🤭", "🤫", "🤔", "🤐", "🤢", "🤮", "🤧", "🥵", "🥶", "🥴", "😵", "🤯", "🤠", "🥳", "🥺", "😢", "😭", "😤", "😠", "😡", "🤬", "🤥", "🤫", "🤔", "🤐", "😷", "🤒", "🤕", "🤢", "🤮", "🤧", "😇", "🥰", "😍", "😘", "😗", "😙", "😚", "🥸", "🤨", "🧐", "🤓", "😎", "🤩", "🥳", "🤗", "🤭", "🤫", "🤥", "🤐", "🤨", "😑", "😶", "😐", "😏", "😒", "🙄", "😬", "🤨", "🤥", "🤫", "😤", "😠", "😡", "🤬", "🤯", "😳", "🥵", "🥶", "😒", "😔"
 ];
 
-const emojisByCategory = {
+const emojisByCategory= {
   "Smiley Face Emojis": ["😀", "😃", "😄", "😁", "😆", "😅", "😂", "🤣", "😊", "😇", "🙂", "🙃"],
   "Emotional Faces Emojis": ["😉", "😌", "😍", "😘", "🥰", "😚", "😋", "😛", "😝", "😜", "🤪", "🤨", "🧐", "🤓", "😎", "🤩", "🥳"],
   "Faces with Tongue Emojis": ["😋", "😛", "😝", "😜", "🤪"],
@@ -21,6 +21,7 @@ const emojisByCategory = {
   "Person Emojis": ["🙎", "🙎‍♂️", "🙎‍♀️", "🙍", "🙍‍♂️", "🙍‍♀️", "💁", "💁‍♂️", "💁‍♀️", "🙅", "🙅‍♂️", "🙅‍♀️", "🙆", "🙆‍♂️", "🙆‍♀️", "🙋", "🙋‍♂️", "🙋‍♀️", "🤷", "🤷‍♂️", "🤷‍♀️", "🙇", "🙇‍♂️", "🙇‍♀️", "💆", "💆‍♂️", "💆‍♀️", "💇", "💇‍♂️", "💇‍♀️", "🚶", "🚶‍♂️", "🚶‍♀️", "🏃", "🏃‍♂️", "🏃‍♀️", "💃", "🕺", "👯", "👯‍♂️", "👯‍♀️", "🧖", "🧖‍♂️", "🧖‍♀️", "🕴️", "🧗", "🧗‍♂️", "🧗‍♀️", "🧘", "🧘‍♂️", "🧘‍♀️", "🛀"],
 };
 
+
 // Function to generate the frequently used emojis
 function generateFrequentlyUsedEmojis() {
   const frequentlyUsedContainer = document.getElementById("frequently-used-container");
@@ -35,13 +36,14 @@ function generateFrequentlyUsedEmojis() {
 
 // Function to generate category-wise emojis
 function generateCategoryWiseEmojis(category, emojis) {
-  const categoryContainer = document.createElement("div");
-  categoryContainer.className = "category-section";
-  
+  const categoryContainer = document.querySelector(".category-container");
+  const categorySection = document.createElement("div");
+  categorySection.className = "category-section";
+
   const categoryHeading = document.createElement("h3");
   categoryHeading.className = "category-heading";
   categoryHeading.innerText = category;
-  categoryContainer.appendChild(categoryHeading);
+  categorySection.appendChild(categoryHeading);
 
   const emojiContainer = document.createElement("div");
   emojiContainer.className = "emoji-container";
@@ -53,8 +55,8 @@ function generateCategoryWiseEmojis(category, emojis) {
     emojiContainer.appendChild(emojiElement);
   });
 
-  categoryContainer.appendChild(emojiContainer);
-  document.querySelector(".category-container").appendChild(categoryContainer);
+  categorySection.appendChild(emojiContainer);
+  categoryContainer.appendChild(categorySection);
 }
 
 // Function to copy emoji to clipboard
