@@ -77,14 +77,19 @@ h2 {
   margin-bottom: 10px;
 }
 
-.category-container .emoji-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-}
-
 /* Fix for headings in category-wise section to display on a new line */
 .category-container h3 {
   display: block;
+}
+
+/* Add styles for each subcategory section */
+.subcategory-section {
+  margin-bottom: 20px;
+}
+
+.subcategory-heading {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 5px;
 }
