@@ -1,44 +1,62 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
 }
 
-.header {
-    background-color: #1976d2;
-    padding: 20px;
-    color: #fff;
-    text-align: center;
+header {
+  background-color: #2196F3;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .emoji-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
-    gap: 10px;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 10px;
+  align-items: center;
 }
 
-.emoji-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    cursor: pointer;
+.emoji-container .emoji {
+  cursor: pointer;
+  font-size: 30px;
+  text-align: center;
+  line-height: 1;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
 }
 
-.emoji-card:hover {
-    background-color: #f5f5f5;
+.emoji-container .emoji:hover {
+  background-color: #f1f1f1;
 }
 
-.emoji-card .emoji {
-    font-size: 24px;
+.ads-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  margin-top: 20px;
 }
 
-#searchInput {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 10px;
+.ads-container img {
+  max-width: 100%;
+  height: auto;
 }
