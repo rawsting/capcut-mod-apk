@@ -32,15 +32,15 @@
 
         <!-- Add to homescreen for Chrome on Android -->
         <meta name="mobile-web-app-capable" content="yes">
-        <link rel="icon" sizes="192x192" href="https://www.get-emoji.com/images/icon.png">
+        <link rel="icon" sizes="192x192" href="https://cdn-icons-png.flaticon.com/128/1828/1828884.png">
 
         <!-- Add to homescreen for Safari on iOS -->
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" href="https://www.get-emoji.com/images/icon.png">
+        <link rel="apple-touch-icon-precomposed" href="https://cdn-icons-png.flaticon.com/128/1828/1828884.png">
 
         <!-- Tile icon for Win8 (144x144 + tile color) -->
-        <meta name="msapplication-TileImage" content="https://www.get-emoji.com/images/icon.png">
+        <meta name="msapplication-TileImage" content="https://cdn-icons-png.flaticon.com/128/1828/1828884.png">
         <meta name="msapplication-TileColor" content="#3372DF">
 
         <link rel="shortcut icon" type="image/png" href="https://www.get-emoji.com/images/short.png" >
@@ -50,7 +50,398 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
-        <link rel="stylesheet" type="text/css" href="https://www.get-emoji.com/css/emoji.css">
+        <styles>html, body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #dfdfdf;
+    font-size: 16px;
+    /*color: #4b4b4b;*/
+}
+
+
+header{
+/*    background-color: #3B5998;*/
+    background-color: #1079BE;
+    height: 90px;
+    padding-top: 10px;
+    box-shadow: 0 0 2px 1px #333;
+    -moz-box-shadow: 0 0 2px 1px #333;
+    -webkit-box-shadow: 0 0 2px 1px #333;
+}
+.logo {
+    margin: 0px;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 500;
+    text-align: center;
+    color: #FFF;
+    text-transform: uppercase;
+}
+.clear{
+    clear:both;
+}
+.logo span {
+    color: #59e870;
+    font-weight: lighter;
+}
+.logo a{
+    color: #FFF;
+    text-decoration: none;
+}
+.logo a:hover{
+    color: #FFF;
+    text-decoration: none;
+}
+p{
+        font-size: 14px;
+}
+#content{
+    margin-top: -30px;
+    background: #f7f9fa;
+    box-shadow: 0 30px 2px 1px #333;
+    -moz-box-shadow: 0 30px 2px 1px #333;
+    -webkit-box-shadow: 0 30px 2px 1px #333;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border-bottom: 1px solid #999;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 100vh;
+    content-visibility: auto;
+}
+.emoji-list{
+    font-family: Segoe UI Emoji; font-size: 3.4em;
+}
+.emoji{
+    border: 1px solid #dfdfdf;
+    font-size: 35px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    min-width: 50px;
+    margin: 5px;
+    display: inline-block;
+}
+.emoji:hover{
+    border: 1px solid blue;
+}
+.emoji:click{
+    border: 1px solid blue;
+}
+.content-title{
+    text-align: center;
+}
+
+.hidden-emoji{
+    display: inline-block;
+    font-size: 0;
+    width: 0;
+}
+
+table{
+   
+
+}
+
+table td{
+    padding: 5px 20px 5px 0;
+    /*border-bottom: 1px solid #1079BE;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+    
+}
+
+.emoji-title{
+    margin: 2px;
+    font-size: 54px;
+    display: block;
+}
+.copy-paste{
+    text-align: center;
+}
+.copy-paste{
+    text-align: center;
+}
+#emoji-symbol{
+    text-align: center;
+    width: 40px;
+}
+#copy-emoji{
+    font-size: 24px;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul.liste-emoji-links li{
+    font-size: 20px;
+}
+ul.liste-emoji-links{
+    margin-bottom: 25px;
+    justify-content: left;
+}
+
+.navbar	{ 
+    background-color: #dfdfdf;
+    color: #4b4b4b;
+    border: none;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    background-color: #dfdfdf;
+    color: #4b4b4b;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #4b4b4b;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #009688;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    color: #009688;
+}
+
+
+#copyright{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.login-with-fb{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.pagination{
+    clear:both;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+}
+.current-link{
+
+}
+
+.thumbnail-img{
+    display: block;
+    max-width:300px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+}
+.thumbnail{
+    height: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+p.description{
+    padding: 20px;
+}
+#content h2,h3{
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.message{
+    text-align: center;
+}
+.img-centered{
+    margin: 0 auto;
+}
+
+
+.like-button{
+    text-align: center;
+    margin: 10px;
+}
+.facebook-comments{
+    text-align: center;
+}
+.text-vizualizari{
+    float:right;
+}
+.text-vizualizari-homepage{
+    bottom: 10px;
+    left: 45%;
+    position: absolute;
+}
+.page-buttons{
+    float: right;
+}
+.delete-page,.share-page,.onhomepage{
+    font-size: 20px;
+    border: none;
+    padding: 0;
+    margin: 2px;
+    background: none;
+}
+.share-page{
+    margin-top: 50px;
+    display: block;
+}
+.onhomepage{
+    margin-top: 45px;
+    display: block;
+    color: #F48024;
+}
+
+.delete-page:hover,.share-page:hover,.onhomepage:hover{
+    font-size: 25px;
+}
+
+.edit-page{
+    font-size: 20px;
+    float: right;
+    margin: 2px;
+}
+.edit-page{
+    font-size: 20px;
+    float: right;
+    margin: 2px;
+}
+.edit-page:hover{
+    font-size: 25px;
+}
+.banc-container{
+    float: none;
+    margin: 15px auto;
+    padding: 0;
+}
+.description-container{
+    float: none;
+    margin: 15px auto;
+    padding: 0;
+}
+.smiley-container{
+    text-align: center;
+
+}
+.banc-text{
+    font-size: 150%;
+}
+.line-a1, .line-a2, .line-a3{
+    width: 100%;
+    margin: 15px auto;
+
+}
+
+.main-content{
+    min-height: 100px;
+}
+
+
+.fb-ls-widgets{
+    float: none;
+    margin: 15px auto;
+    padding: 0;
+    height: 50px;
+}
+
+a.fb-share-url{
+    background: #425DAB;
+    color: #fff;
+    float: right;
+    border: none;
+}
+a.fb-share-url:hover{
+    background: #5777CE;
+}
+
+.share-text{
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+.fb-share-url .glyphicon-share-alt{
+    font-size: 15px;
+}
+
+.fb-like{
+    float: left;
+    transform: scale(1.5);
+    -ms-zoom: 1.5;
+    -ms-transform: scale(1.5); 
+    -webkit-transform: scale(1.5); 
+    -o-transform: scale(1.5); 
+    -moz-transform: scale(1.5); 
+    transform-origin: top left;
+    -ms-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+
+}       
+
+
+.homepage-title{
+    float: left;
+    padding: 0;
+}
+.list-title{
+    
+}
+#cse-search-results iframe{
+    width:100%;
+}
+ul.licensing{
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    list-style-type: circle;
+}
+
+.search-container{
+}
+
+.search-input{
+    width: 75% !important;
+    height: 29px !important;
+    border: 1px solid rgb(126, 157, 185);
+    outline: none;
+    float:left;
+    margin-right: 1%;
+}
+
+.search-submit{
+    width: 24%;
+    float:left;
+}
+
+.playly{
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.ly{
+    border: 1px solid #eeeeee;
+    border-style: groove;
+    border-radius: 5px;
+    padding: 3px 10px;
+    box-shadow: inset 0 0 3px;
+}
+.ly:hover{
+    box-shadow: inset 0 0 6px;
+    text-decoration: none;
+}
+
+.ly:hover > .playly{
+    margin-right: 5px;
+    margin-left: 10px;
+}</styles>
         
                         
     </head>
@@ -74,26 +465,25 @@
                  <div id="content" class="container">
 
     <script type="application/ld+json">
-    {"@context" : "http://schema.org",
-     "@type" : "Organization",  
-      "name" : "Get Emoji",
-      "url" : "http://www.get-emoji.com", 
-      "logo": "http://www.get-emoji.com/images/get-emoji.jpg" }
-    </script>
+  function selectEmoji(element) {
+    element.getSelection().toString();
+}
+
+
+function copyToClipboard(element) {
+    var temp = document.getElementById(element);
+    temp.select();
+    var emoji = document.getElementById(element).value;
+    document.getElementById("copy-emoji").value = emoji + ' Copied';
+
+    document.execCommand("copy");
+
+}   </script>
 
     <h1 class="homepage-title col-xs-12 col-sm-9  col-md-10 col-lg-10">Get Emoji with Copy and Paste</h1>
 
         <div class="search-container col-xs-12 col-sm-8 col-md-6 col-lg-4" style="padding: 0;">
 
-    <form action="http://www.get-emoji.com/search/" id="cse-search-box">
-        <div>
-            <input type="hidden" name="cx" value="partner-pub-8729011883270539:1569399797" />
-            <input type="hidden" name="cof" value="FORID:10" />
-            <input type="hidden" name="ie" value="UTF-8" />
-            <input type="text" name="q" size="27" class="search-input"/>
-            <input type="submit" name="sa" value="Search" class="search-submit"/>
-        </div>
-    </form>
 
     <script src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
 </div>
@@ -102,16 +492,7 @@
 
 
         <div class="line-a1">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Get Emoji 1 Responsive -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-8729011883270539"
-         data-ad-slot="9768212183"
-         data-ad-format="auto"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+ //ads by google code
 </div>
 
     
