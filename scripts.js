@@ -1,6 +1,8 @@
 const emojiCategories = [
   "Smiley Face Emojis",
-  "Emotional Faces Emojis",
+  "Emotional Faces Emojis","Faces with Tongue Emojis","Neutral Faces Emojis", "Monkey Faces Emojis", "Cat Faces Emojis","Costume Faces Emojis","Negative Faces Emojis","Concerned Faces Emojis","Sick Faces Emojis", "Sleepy Faces Emojis",
+  "Emotion Emojis","Hands and other Body Parts Emojis","Person Emojis","Family Emojis", "Animals and Nature Emojis","Animals and Nature Emojis","Food and Drinks Emojis","Travel and Places Emojis","Time Emojis","Sky and Weather Emojis",
+  "Sky and Weather Emojis", "Activity Emojis","Award Medals Emojis","Sport Emojis","Games Emojis",  "Arts and Crafts Emojis","Clothing Objects Emojis",
   // Add more categories here...
 ];
 const emojisByCategory = {
