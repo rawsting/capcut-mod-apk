@@ -9,7 +9,7 @@ header {
   background-color: #2196F3;
   color: #fff;
   padding: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 main {
@@ -67,6 +67,12 @@ h2 {
 
 .category-container {
   margin-top: 10px;
+}
+
+.category-container h2 {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .category-container h3 {
